@@ -43,7 +43,7 @@ export default function RegisterPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch('http://localhost:4000/users/email-exists', {
+        fetch('https://calm-fortress-14055.herokuapp.com/users/email-exists', {
                     method: 'POST',
                     headers: {
                     "Content-Type" : "application/json"

@@ -19,7 +19,7 @@ export default function Inquiries() {
     
     useEffect(() => {
         console.log("run")
-        fetch('http://localhost:4000/users/inquiries', {
+        fetch('https://calm-fortress-14055.herokuapp.com/users/inquiries', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
