@@ -1,0 +1,14 @@
+$colors: (
+    'background': #fafaff,
+    'headline': #0a0a0f,
+    'font': #4a4a4f,
+    // 'primary': #1f7a8c,
+    // 'primary': #06d6a0,
+    // 'primary': #7161ef,
+    'primary': #f82d59,
+    'border': #cacacf
+);
+
+@function color($key) {
+    @return map-get($colors, $key);
+}

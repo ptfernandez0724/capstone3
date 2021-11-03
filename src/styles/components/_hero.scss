@@ -1,0 +1,143 @@
+.hero {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    // background-image: url('../../assets/img/banner.jpg');
+    // background-size: cover;
+    // background-position: left;
+
+    &-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        // background-color: rgba($color: #000000, $alpha: .5);
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        // min-height: 400px;
+        // text-align: center;
+        // padding: 1.5rem;
+        h1 {
+            font-size: 2.5rem;
+            color: color('background');
+            width: 100%;
+            max-width: 750px;
+        }
+    }
+}
+// .herowrapper {
+
+//     width: 100%;
+//     height: 550px;
+//     position: relative;
+// }
+// .search-container {
+//     top: 165px;
+//     position: relative;
+//     z-index: 2;
+//     margin: 0 auto;
+//     width: 95%;
+//     max-width: 610px;
+// }
+
+.search-container {
+    top: 165px;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 610px;
+}
+
+.search-container .search-form, .hero-wrapper .search-container .search-form .input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 610px;
+    min-width: 180px;
+    display: inline-block;
+}
+
+.search-container .search-form, .search-container .search-form .input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 610px;
+    min-width: 180px;
+    display: inline-block;
+}
+
+.search-container .search-form .input-wrapper .search-input {
+    padding: 17px 120px 19px 20px;
+    font-size: 18px;
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    background-color: #ffff;
+    color: #444;
+    text-overflow: ellipsis;
+}
+
+.search-container .searchBtnContainer {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    bottom: 0;
+    word-spacing: -0.26em;
+}
+
+.search-container .searchBtnContainer .search-button {
+    margin-top: 17px;
+    margin-right: 8px;
+    width: 102px;
+    height: 56px;
+    font-size: 18px;
+    background: #f82d59;
+    color: #fff;
+    border-radius: 5px;
+    border-width: 0;
+}
+
+video {
+    width: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+  }
+
+@include breakpoint-up('md') {
+    .hero {
+        &-container {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@include breakpoint-up('lg') {
+    .hero {
+        &-container {
+            h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@include breakpoint-up('xl') {
+    .hero {
+        &-container {
+            h1 {
+                font-size: 4.5rem;
+            }
+        }
+    }
+}

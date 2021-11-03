@@ -1,0 +1,81 @@
+.login {
+    // background-image: url('../../assets/img/banner.jpg');
+    // background-size: cover;
+    // background-position: center;
+    &-container {
+        min-height: 100vh;
+        padding-top: 5.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 350px;
+            padding: 1.5rem;
+            background-color: color('background');
+            border-radius: .5rem;
+            &-title {
+                margin-bottom: 2rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            &-group {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+                margin-bottom: .75rem;
+                input {
+                    width: 100%;
+                    padding: .65rem 1.2rem;
+                    border-radius: .5rem;
+                    margin-top: .25rem;
+                }
+            }
+
+            &-logo {
+                width: 150px;
+                margin: 0 auto;
+                margin-bottom: 2rem;
+            }
+
+            &-submit {
+                width: 100%;
+                padding: .65rem 1.2rem;
+                border: .075rem solid color('primary');
+                background-color: color('primary');
+                color: color('background');
+                border-radius: .5rem;
+                margin: .5rem 0;
+                &:hover {
+                    background-color: darken(color('primary'), 5%);
+                    border-color: darken(color('primary'), 5%);
+                }
+
+                &:focus {
+                    box-shadow:  0 0 0 .25rem rgba($color: color('primary'), $alpha: 0.3);
+                }
+            }
+            &-disabledsubmit {
+                width: 100%;
+                padding: .65rem 1.2rem;
+                border: .075rem solid desaturate(color('primary'), 70%);
+                background-color: desaturate(color('primary'), 70%);
+                color: color('background');
+                border-radius: .5rem;
+                margin: .5rem 0;
+            }
+
+            &-text-small {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+}

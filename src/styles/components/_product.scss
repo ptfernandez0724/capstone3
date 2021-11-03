@@ -1,0 +1,92 @@
+.product {
+    padding: 1rem 0;
+    width: 100%;
+    height: 100%;
+
+    &-container {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+
+    &-img {
+        width: 100%;
+    }
+
+    &-flex {
+        margin-top: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        button {
+            @include normalTransition;
+            // width: 50%;
+            padding: .5rem 1rem;
+            background-color: transparent;
+            border-radius: .5rem;
+            border: .075rem solid color('border');
+            &:hover,
+            &:focus {
+                background-color: color('primary');
+                border-color: color('primary');
+                color: color('background');
+            }
+
+            &:not(:first-child) {
+                @include normalTransition;
+                border-color: color('primary');
+                background-color: color('primary');
+                color: color('background');
+                margin-left: 1rem;
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: color('primary');
+                }
+            }
+        }
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        white-space: normal;
+        display: -moz-box;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+    }
+    
+    h4 {
+        font-size: 1.4rem;
+    }
+}
+
+@include breakpoint-up('sm') {
+    .product {
+        padding: 1rem;
+        &-container {
+            grid-template-columns: repeat(2, 50%);
+        }
+    }
+}
+
+@include breakpoint-up('lg') {
+    .product {
+        &-container {
+            grid-template-columns: repeat(3, 33.33%);
+        }
+    }
+}
+
+@include breakpoint-up('xl') {
+    .product {
+        &-container {
+            grid-template-columns: repeat(4, 25%);
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    &-img {
+        width: 100%;
+        // height: 100%;
+        max-width: 100px;
+        object-fit: cover;
+    }
+
+    &-body {
+        padding: 1rem;
+        small {
+            white-space: normal;
+            display: -moz-box;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+        }
+
+        h3 {
+            display: flex;
+            align-items: center;
+            .trash {
+                margin-left: 1rem;
+                border: 0;
+                border-radius: .5rem;
+                width: 35px;
+                height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+                color: color('background');
+                background-color: color('primary');
+                &:hover,
+                &:focus {
+                    background-color: lighten($color: color('primary'), $amount: 10);
+                }
+            }
+        }
+    }
+
+    &-container {
+        min-height: 300px;
+        padding-bottom: 3rem;
+    }
+
+    &-checkout {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: .5rem 1.5rem;
+        background-color: color('background');
+        border-top: .05rem solid color('border');
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .checkout {
+            background-color: color('primary');
+            padding: .6rem 1rem;
+            border-radius: .5rem;
+            color: color('background');
+            border: 0;
+            &:hover,
+            &:focus {
+                background-color: lighten($color: color('primary'), $amount: 10);
+            }
+        }
+    }
+}
+
+@include breakpoint-up('lg') {
+    .cart {
+        &-img {
+            max-width: 200px;
+        }
+    }
+}
