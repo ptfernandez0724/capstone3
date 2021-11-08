@@ -13,6 +13,7 @@ import ReactHelmet from 'components/Helmet.component';
 import Navbar from '../components/Navbar.component';
 import Footer from 'components/Footer.component';
 import { Router } from 'workbox-routing';
+import Video from '../assets/videos/tachometer.mp4';
 
 export default function LoginPage() {
     const Router = useHistory();

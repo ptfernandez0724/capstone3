@@ -9,7 +9,6 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import ReactHelmet from 'components/Helmet.component';
 import Swal from 'sweetalert2';
-import Footer from 'components/Footer.component';
 import Video from '../assets/videos/tachometer.mp4';
 import placeholderimg from '../assets/img/placeholder-vehicle.jpg'
 
@@ -40,10 +39,12 @@ export default function HomePage() {
       })
 
     const override = css`
-        display: block;
-        margin: 0 auto;
+        display: fixed;
+        position: absolute;
+        left: 45%;
+        margin: auto;
         border-color: red;
-    `;
+    `
     
     const fetchData = () => {
         fetch('https://calm-fortress-14055.herokuapp.com/products/allavailable')
@@ -203,7 +204,6 @@ export default function HomePage() {
                 <section className="hero-container">
                     <video autoPlay muted loop>
                         <source src={Video} type="video/mp4" />
-                        <input type="text" placeholder="Search"></input> 
                     </video>
                     {/* <div className="search-container">
                         <form className="search-form">
@@ -232,8 +232,7 @@ export default function HomePage() {
             </section>
             <section className="container">
                 <section className="product-container">{displayProduct}</section>
-            </section>
-            <Footer />
+            </section>           
         </>
     );
 }
